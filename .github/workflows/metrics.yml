@@ -18,6 +18,22 @@ jobs:
       contents: write
 
     steps:
+      # O action falha com "You must provide a valid GitHub personal token" quando
+      # o secret nao existe, o que nao diz onde esta o problema. Este passo troca
+      # essa mensagem por uma instrucao acionavel.
+      - name: Conferir o secret METRICS_TOKEN
+        env:
+          METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
+        run: |
+          if [ -z "$METRICS_TOKEN" ]; then
+            echo "::error::O secret METRICS_TOKEN chegou vazio. Duas causas possiveis:"
+            echo "::error::1) Ele nao foi criado. Crie um PAT classico em Settings do seu PERFIL > Developer settings > Personal access tokens > Tokens (classic) e salve em Settings deste REPOSITORIO > Secrets and variables > Actions > New repository secret, com o nome exato METRICS_TOKEN."
+            echo "::error::2) Ele foi criado como Environment secret. Neste caso ou mova para Repository secret, ou declare o environment correspondente neste job."
+            echo "::error::GITHUB_TOKEN nao substitui o PAT aqui: o action le dados de usuario, que um token com escopo de repositorio nao alcanca."
+            exit 1
+          fi
+          echo "METRICS_TOKEN presente."
+
       # Card geral: perfil, atividade, repositórios.
       - name: Gerar card de estatísticas
         uses: lowlighter/metrics@latest
