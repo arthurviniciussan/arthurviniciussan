@@ -10,7 +10,7 @@ regras de negócio de verdade — não só CRUD.
 - ☕ Java + Spring Boot como stack principal
 - 🟣 Aprendendo C# e o ecossistema .NET (ASP.NET Core)
 - ⚛️ Front quando o projeto pede: React + TypeScript, Vite, TanStack, Zod
-- 🧪 Estudando testes automatizados (JUnit 5, Mockito, Testcontainers) e design patterns
+- 🧪 Testes automatizados na prática (JUnit 5, AssertJ, Testcontainers, Vitest) e design patterns
 - 🐧 Linux no dia a dia (Zorin OS)
 - 💼 Aberto a oportunidades de **estágio** em desenvolvimento
 
@@ -55,35 +55,37 @@ regras de negócio de verdade — não só CRUD.
 
 ## 💡 O que eu venho construindo
 
-**Sistema de controle de manutenção de frota** — aplicação web para gestão de abastecimentos e
-manutenções de 26 veículos em 2 filiais. Painel de relatórios mobile-first, revisão de lançamentos de
-combustível, histórico de manutenções com filtros por placa/filial/data.
-`React` `TypeScript` `Vite` `TanStack Query/Router/Table` `Zod`
-
-**Análise de pedidos de distribuidora (userscript)** — script de navegador que coleta e agrega
-pedidos de uma plataforma interna, calculando preço médio ponderado por canal de venda. Arquitetura
-separada em cache, derivação e agregação: mudança de regra de negócio não exige refazer o fetch das páginas.
-`JavaScript` `DOM parsing` `Tampermonkey`
-
-**Jogo de cartas em Java** — protótipo jogável estruturado em MVC (8 classes, 3 pacotes), empacotado
-como JAR executável, com roadmap de entregas para modo defesa, cartas de magia/armadilha e modo 2 jogadores.
-`Java` `Swing/Java2D` `MVC`
+**[Controle de manutenção de frota — Ruan Gás](https://github.com/arthurviniciussan/ruan-gas-controle-de-manutencao)**
+MVP full stack que levei a uma distribuidora de gás real: em vez de slides, apresentei o sistema
+funcionando, com o vocabulário da própria operação (placa, filial, troca de óleo, dinheiro do caixa).
+Está **em produção numa VPS**, sob HTTPS, com deploy automatizado e backup diário.
+Resolve três dores medidas na operação: alerta automático de troca de óleo por veículo, apuração do
+total do dia já separado por forma de pagamento (para conferir a fatura do posto) e revisão automática
+de lançamentos com km incoerente. Mobile-first, porque quem lança está no pátio e não na mesa.
+`Java 21` `Spring Boot 3.5` `PostgreSQL + Flyway` `Testcontainers` `React 19` `TypeScript` `Tailwind + shadcn/ui`
 
 ---
 
 ## 📚 Estudando agora
 
-`Testes automatizados` · `Design Patterns` · `PostgreSQL + Testcontainers` · `Swagger/OpenAPI` ·
-`Docker Compose na mão` · `CI/CD com GitHub Actions` · `C# e ASP.NET Core`
+`Design Patterns` · `Swagger/OpenAPI` · `Observabilidade e logs` · `CI/CD com GitHub Actions` ·
+`C# e ASP.NET Core`
 
 ---
 
 ## 📊 GitHub Stats
 
 <!--
-  IMPORTANTE: se os cards aparecerem quebrados, troque o domínio abaixo pelo do SEU deploy
-  no Vercel (ver instruções no final deste arquivo). A instância pública é compartilhada
-  por milhares de perfis e estoura o rate limit da API do GitHub com frequência.
+  Se os cards aparecerem quebrados ("maximum retries exceeded"), é rate limit: esta é a
+  instância pública, compartilhada por milhares de perfis, e os tokens dela se esgotam.
+  Costuma voltar sozinho em ~1h. Para resolver de vez, suba a sua instância e troque o
+  domínio nas duas URLs abaixo:
+    1. fork de https://github.com/anuraghazra/github-readme-stats
+    2. importe o fork no Vercel (Add New > Project)
+    3. crie um PAT clássico com escopo read:user (ou repo, para contar repos privados)
+    4. no Vercel, adicione a variável de ambiente PAT_1 com esse token
+    5. troque github-readme-stats.vercel.app pelo domínio do seu deploy
+  Obs.: count_private=true só tem efeito se o SEU PAT tiver escopo repo.
 -->
 <div align="center">
   <img height="165em" src="https://github-readme-stats.vercel.app/api?username=arthurviniciussan&show_icons=true&rank_icon=github&include_all_commits=true&count_private=true&hide_border=true&cache_seconds=86400&theme=tokyonight" alt="GitHub Stats de arthurviniciussan">
