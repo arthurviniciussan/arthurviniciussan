@@ -40,10 +40,9 @@
 ## 📊 GitHub Stats
 
 <div align="center">
+[![GitHub Stats](https://github-stats-extended.vercel.app/api?username=arthurviniciussan&rank_icon=github&show_icons=true&include_all_commits=true&theme=tokyonight)](https://github-stats-extended.vercel.app/api?username=arthurviniciussan&rank_icon=github&show_icons=true&include_all_commits=true&theme=tokyonight)
 
-<img height="180em" src="https://github-stats-extended.vercel.app/api?username=arthurviniciussan&rank_icon=github&show_icons=true&include_all_commits=true&theme=tokyonight"/>
-
-<img height="180em" src="https://github-stats-extended.vercel.app/api/top-langs?username=arthurviniciussan&layout=donut&langs_count=6&theme=tokyonight"/>
+[![Top Languages](https://github-stats-extended.vercel.app/api/top-langs?username=arthurviniciussan&layout=donut&langs_count=4&theme=tokyonight)](https://github-stats-extended.vercel.app/api/top-langs?username=arthurviniciussan&layout=donut&langs_count=4&theme=tokyonight)
 
 </div>
 
