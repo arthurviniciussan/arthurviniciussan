@@ -76,20 +76,21 @@ de lançamentos com km incoerente. Mobile-first, porque quem lança está no pá
 ## 📊 GitHub Stats
 
 <!--
-  Se os cards aparecerem quebrados ("maximum retries exceeded"), é rate limit: esta é a
-  instância pública, compartilhada por milhares de perfis, e os tokens dela se esgotam.
-  Costuma voltar sozinho em ~1h. Para resolver de vez, suba a sua instância e troque o
-  domínio nas duas URLs abaixo:
-    1. fork de https://github.com/anuraghazra/github-readme-stats
-    2. importe o fork no Vercel (Add New > Project)
-    3. crie um PAT clássico com escopo read:user (ou repo, para contar repos privados)
-    4. no Vercel, adicione a variável de ambiente PAT_1 com esse token
-    5. troque github-readme-stats.vercel.app pelo domínio do seu deploy
-  Obs.: count_private=true só tem efeito se o SEU PAT tiver escopo repo.
+  Estes SVGs são gerados pelo workflow .github/workflows/metrics.yml e commitados
+  neste próprio repositório, então são servidos pelo GitHub e não dependem de
+  nenhum serviço de terceiro no ar.
+
+  Pré-requisito (uma vez só): criar um PAT clássico e salvá-lo em
+  Settings > Secrets and variables > Actions com o nome METRICS_TOKEN.
+  Sem escopo nenhum já cobre dados públicos; marque "repo" se quiser que
+  repositórios privados entrem na contagem.
+
+  Os arquivos só existem depois do primeiro disparo:
+  Actions > Generate GitHub Metrics > Run workflow.
 -->
 <div align="center">
-  <img height="165em" src="https://github-readme-stats.vercel.app/api?username=arthurviniciussan&show_icons=true&rank_icon=github&include_all_commits=true&count_private=true&hide_border=true&cache_seconds=86400&theme=tokyonight" alt="GitHub Stats de arthurviniciussan">
-  <img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs?username=arthurviniciussan&layout=compact&langs_count=6&hide_border=true&cache_seconds=86400&theme=tokyonight" alt="Linguagens mais usadas">
+  <img src="metrics/stats.svg" alt="Estatísticas do GitHub de arthurviniciussan" width="46%">
+  <img src="metrics/languages.svg" alt="Linguagens mais usadas" width="46%">
 </div>
 
 ## 🐍 Contributions
