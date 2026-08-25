@@ -3,7 +3,7 @@
 - 🌱 Studying Systems Analysis and Development (ADS)
 ##
 
-[![GitHub Stats](https://github-stats-extended.vercel.app/api?username=GustavoSilva538&rank_icon=github&show_icons=true&include_all_commits=true&theme=tokyonight)](https://github-stats-extended.vercel.app/api?username=GustavoSilva538&rank_icon=github&show_icons=true&include_all_commits=true&theme=tokyonight)
+[![GitHub Stats](https://github-stats-extended.vercel.app/api?username=arthurviniciussan&rank_icon=github&show_icons=true&include_all_commits=true&theme=tokyonight)](https://github-stats-extended.vercel.app/api?username=arthurviniciussan&rank_icon=github&show_icons=true&include_all_commits=true&theme=tokyonight)
 
 [![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=GustavoSilva538&layout=donut&langs_count=4&theme=tokyonight)](https://github-stats-extended.vercel.app/api/top-langs?username=GustavoSilva538&layout=donut&langs_count=4&theme=tokyonight)
 
