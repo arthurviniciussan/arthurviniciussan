@@ -1,0 +1,48 @@
+name: Generate GitHub Metrics
+
+on:
+  schedule:
+    # Todo dia às 03:00 UTC (meia-noite em Brasília no horário padrão).
+    - cron: "0 3 * * *"
+  # Necessário para o primeiro disparo, sem esperar o cron.
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      # O action comita os SVGs gerados de volta no repositório.
+      contents: write
+
+    steps:
+      # Card geral: perfil, atividade, repositórios.
+      - name: Gerar card de estatísticas
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: ${{ github.repository_owner }}
+          filename: metrics/stats.svg
+          template: classic
+          base: header, activity, repositories
+          config_timezone: America/Sao_Paulo
+          committer_message: "chore: atualiza card de estatísticas"
+
+      # Card de linguagens, separado para poder ficar lado a lado no README.
+      - name: Gerar card de linguagens
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: ${{ github.repository_owner }}
+          filename: metrics/languages.svg
+          base: ""
+          plugin_languages: yes
+          plugin_languages_limit: 6
+          plugin_languages_details: percentage
+          plugin_languages_threshold: 1%
+          # Marcação e config poluem a contagem sem dizer nada sobre o que eu programo.
+          plugin_languages_ignored: html, css, scss, dockerfile, makefile, shell, batchfile, procfile
+          config_timezone: America/Sao_Paulo
+          committer_message: "chore: atualiza card de linguagens"
