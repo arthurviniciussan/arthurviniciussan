@@ -64,12 +64,6 @@ total do dia já separado por forma de pagamento (para conferir a fatura do post
 de lançamentos com km incoerente. Mobile-first, porque quem lança está no pátio e não na mesa.
 `Java 21` `Spring Boot 3.5` `PostgreSQL + Flyway` `Testcontainers` `React 19` `TypeScript` `Tailwind + shadcn/ui`
 
-**Análise de pedidos de distribuidora (userscript)**
-Script de navegador que coleta e agrega pedidos de uma plataforma interna, calculando preço médio
-ponderado por canal de venda. Arquitetura separada em cache, derivação e agregação: mudar uma regra
-de negócio não obriga a refazer o fetch das páginas.
-`JavaScript` `DOM parsing` `Tampermonkey`
-
 ---
 
 ## 📚 Estudando agora
