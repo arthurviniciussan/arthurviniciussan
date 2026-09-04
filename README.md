@@ -4,7 +4,7 @@
 
 Estudante de Análise e Desenvolvimento de Sistemas (conclusão prevista para 2028), focado em backend
 e em escrever código que outra pessoa consiga ler depois. Estudo todos os dias e gosto de projetos com
-regras de negócio de verdade — não só CRUD.
+regras de negócio de verdade,não só CRUD.
 
 - 🎓 ADS · foco em backend e arquitetura de aplicações
 - ☕ Java + Spring Boot como stack principal
